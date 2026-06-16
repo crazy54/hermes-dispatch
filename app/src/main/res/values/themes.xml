@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Minimal activity theme for a 100% Jetpack Compose app -->
+    <style name="Theme.Hermes" parent="android:Theme.NoTitleBar" />
+    <style name="Theme.Hermes.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_bg</item>
+        <item name="postSplashScreenTheme">@style/Theme.Hermes</item>
+    </style>
+</resources>

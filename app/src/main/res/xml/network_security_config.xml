@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Hermes Dispatch connects to self-hosted gateways — these can be on any
+    address: LAN, Tailscale, VPN, localhost, or a public domain over HTTP or
+    HTTPS. We allow cleartext for all destinations so users don't hit
+    "CLEARTEXT not permitted" errors on private/VPN addresses.
+
+    Users running a public-internet gateway should use HTTPS — but that's
+    their choice, not something we enforce in the client.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
